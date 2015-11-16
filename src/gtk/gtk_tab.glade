@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 
+
+Copyright (C) NEngine Team
+
+This file is part of CSA-Rainbow-Table-Tool.
+
+CSA-Rainbow-Table-Tool is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+CSA-Rainbow-Table-Tool is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with CSA-Rainbow-Table-Tool.  If not, see <http://www.gnu.org/licenses/>.
+
+Author: NEngine Team
+
+-->
+<interface>
+  <requires lib="gtk+" version="3.0"/>
+  <!-- interface-license-type gplv3 -->
+  <!-- interface-name CSA-Rainbow-Table-Tool -->
+  <!-- interface-copyright NEngine Team -->
+  <!-- interface-authors NEngine Team -->
+  <object class="GtkImage" id="open_icon1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-open</property>
+  </object>
+  <object class="GtkImage" id="open_icon2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-open</property>
+  </object>
+  <object class="GtkImage" id="open_icon3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-open</property>
+  </object>
+  <object class="GtkImage" id="open_icon4">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-open</property>
+  </object>
+  <object class="GtkImage" id="open_icon6">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-open</property>
+  </object>
+  <object class="GtkWindow" id="main_window">
+    <property name="width_request">505</property>
+    <property name="height_request">500</property>
+    <property name="can_focus">False</property>
+    <property name="border_width">1</property>
+    <property name="title" translatable="yes">Posix Rainbow Table Tool</property>
+    <property name="resizable">False</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="has_resize_grip">True</property>
+    <child>
+      <object class="GtkBox" id="box2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkNotebook" id="table_view">
+            <property name="width_request">500</property>
+            <property name="height_request">290</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">center</property>
+            <property name="valign">start</property>
+            <child>
+              <object class="GtkFixed" id="fixed1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkButton" id="calcChain_chainDir_Open">
+                    <property name="width_request">36</property>
+                    <property name="height_request">34</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">open_icon2</property>
+                    <property name="yalign">0.52999997138977051</property>
+                  </object>
+                  <packing>
+                    <property name="x">532</property>
+                    <property name="y">10</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static1">
+                    <property name="width_request">78</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Chain Dir :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">6</property>
+                    <property name="y">11</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="calcChain_chainDir_Filename">
+                    <property name="width_request">447</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">82</property>
+                    <property name="y">11</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="calcChain_Start">
+                    <property name="label" translatable="yes">Start</property>
+                    <property name="width_request">94</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">82</property>
+                    <property name="y">46</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="calcChain_Pause">
+                    <property name="label" translatable="yes">Pause</property>
+                    <property name="width_request">94</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">191</property>
+                    <property name="y">46</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="calcChain_Stop">
+                    <property name="label" translatable="yes">Stop</property>
+                    <property name="width_request">94</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">295</property>
+                    <property name="y">46</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static2">
+                    <property name="width_request">49</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Part :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">37</property>
+                    <property name="y">80</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkProgressBar" id="calcChain_ProgressPart">
+                    <property name="width_request">382</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="x">84</property>
+                    <property name="y">78</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static3">
+                    <property name="width_request">44</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">File :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">40</property>
+                    <property name="y">101</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkProgressBar" id="calcChain_ProgressFile">
+                    <property name="width_request">382</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="fraction">1</property>
+                  </object>
+                  <packing>
+                    <property name="x">84</property>
+                    <property name="y">98</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static4">
+                    <property name="width_request">56</property>
+                    <property name="height_request">26</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Speed :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">22</property>
+                    <property name="y">125</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="calcChain_speed_output">
+                    <property name="width_request">272</property>
+                    <property name="height_request">31</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">80</property>
+                    <property name="y">124</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="calcChain_part_percent">
+                    <property name="width_request">98</property>
+                    <property name="height_request">22</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">475</property>
+                    <property name="y">82</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="calcChain_file_percent">
+                    <property name="width_request">100</property>
+                    <property name="height_request">21</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">475</property>
+                    <property name="y">104</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="calc_chains">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Calc Chains</property>
+                <property name="label" translatable="yes">Calc Chains</property>
+              </object>
+              <packing>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="static5">
+                    <property name="width_request">81</property>
+                    <property name="height_request">42</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Chain File :</property>
+                    <property name="justify">right</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static6">
+                    <property name="width_request">58</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="halign">end</property>
+                    <property name="label" translatable="yes">RBT Dir :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">18</property>
+                    <property name="y">42</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static7">
+                    <property name="width_request">42</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">File :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">38</property>
+                    <property name="y">97</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="addRainbowTable_chainFile_Filename">
+                    <property name="width_request">447</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">82</property>
+                    <property name="y">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="addRainbowTable_chainFile_Open">
+                    <property name="width_request">34</property>
+                    <property name="height_request">34</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">open_icon3</property>
+                    <property name="yalign">0.52999997138977051</property>
+                  </object>
+                  <packing>
+                    <property name="x">532</property>
+                    <property name="y">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="addRainbowTable_rbtDir_Filename">
+                    <property name="width_request">447</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">82</property>
+                    <property name="y">45</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="addRainbowTable_rbtDir_Open">
+                    <property name="width_request">34</property>
+                    <property name="height_request">34</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">open_icon6</property>
+                    <property name="yalign">0.52999997138977051</property>
+                  </object>
+                  <packing>
+                    <property name="x">532</property>
+                    <property name="y">41</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkProgressBar" id="addRainbowTable_ProgressFile">
+                    <property name="width_request">447</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="x">82</property>
+                    <property name="y">95</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="addRainbowTable_Merge">
+                    <property name="label" translatable="yes">Merge</property>
+                    <property name="width_request">94</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">84</property>
+                    <property name="y">75</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="addRainbowTable_Stop">
+                    <property name="label" translatable="yes">Stop</property>
+                    <property name="width_request">94</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">183</property>
+                    <property name="y">75</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="addRainbowTable_percent">
+                    <property name="width_request">240</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">286</property>
+                    <property name="y">78</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="rainbow_table">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Add to Rainbow Table</property>
+                <property name="label" translatable="yes">Rainbow Table</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="static8">
+                    <property name="width_request">578</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Search duplicate crypted payload in TS and show the first 8 bytes (Crypt8) of the payload
+</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static11">
+                    <property name="width_request">55</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">TS File :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">16</property>
+                    <property name="y">28</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static12">
+                    <property name="width_request">35</property>
+                    <property name="height_request">29</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">PID :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">36</property>
+                    <property name="y">57</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static13">
+                    <property name="width_request">58</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">PL size :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">12</property>
+                    <property name="y">87</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static14">
+                    <property name="width_request">69</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">File limit :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">2</property>
+                    <property name="y">123</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="searchCrypt8_Filename">
+                    <property name="width_request">447</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">72</property>
+                    <property name="y">28</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="searchCrypt8_PID">
+                    <property name="width_request">160</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">72</property>
+                    <property name="y">58</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="searchCrypt8_PL_size">
+                    <property name="width_request">160</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">72</property>
+                    <property name="y">88</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="searchCrypt8_File_limit">
+                    <property name="width_request">168</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">71</property>
+                    <property name="y">119</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static15">
+                    <property name="width_request">157</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">dec. (empty for all PIDs)</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">242</property>
+                    <property name="y">63</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static16">
+                    <property name="width_request">261</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">dec. (empty for a payload of 184 bytes)</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">242</property>
+                    <property name="y">92</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static17">
+                    <property name="width_request">288</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">MByte (limit search - empty for 4096 MByte)</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">241</property>
+                    <property name="y">123</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="searchCrypt8_rbtDir_Open">
+                    <property name="width_request">34</property>
+                    <property name="height_request">34</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">open_icon1</property>
+                    <property name="yalign">0.52999997138977051</property>
+                  </object>
+                  <packing>
+                    <property name="x">524</property>
+                    <property name="y">23</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="searchCrypt8_Start">
+                    <property name="label" translatable="yes">Start</property>
+                    <property name="width_request">94</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">70</property>
+                    <property name="y">151</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="searchCrypt8_Stop">
+                    <property name="label" translatable="yes">Stop</property>
+                    <property name="width_request">94</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">167</property>
+                    <property name="y">151</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static10">
+                    <property name="width_request">33</property>
+                    <property name="height_request">27</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">File :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">34</property>
+                    <property name="y">185</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkProgressBar" id="searchCrypt8_ProgressFile">
+                    <property name="width_request">447</property>
+                    <property name="height_request">22</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="x">71</property>
+                    <property name="y">182</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="searchCrypt8_percent">
+                    <property name="width_request">221</property>
+                    <property name="height_request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">286</property>
+                    <property name="y">151</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="search_crypt">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Search Crypt8 in TS</property>
+                <property name="label" translatable="yes">Crypt8</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed4">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="static9">
+                    <property name="width_request">58</property>
+                    <property name="height_request">22</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Crypt8 :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">4</property>
+                    <property name="y">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="searchCW_Crypt8">
+                    <property name="width_request">447</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">61</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="searchCW_RBTDir">
+                    <property name="width_request">414</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">61</property>
+                    <property name="y">35</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="searchCW_Open">
+                    <property name="width_request">34</property>
+                    <property name="height_request">34</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">open_icon4</property>
+                    <property name="yalign">0.52999997138977051</property>
+                  </object>
+                  <packing>
+                    <property name="x">478</property>
+                    <property name="y">35</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static18">
+                    <property name="width_request">58</property>
+                    <property name="height_request">26</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">RBT Dir :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="y">36</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="searchCW_Start">
+                    <property name="label" translatable="yes">Start</property>
+                    <property name="width_request">82</property>
+                    <property name="height_request">27</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">63</property>
+                    <property name="y">69</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="searchCW_Stop">
+                    <property name="label" translatable="yes">Stop</property>
+                    <property name="width_request">76</property>
+                    <property name="height_request">29</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="valign">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">153</property>
+                    <property name="y">69</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="searchCW_CW">
+                    <property name="width_request">447</property>
+                    <property name="height_request">28</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">61</property>
+                    <property name="y">116</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="static19">
+                    <property name="width_request">38</property>
+                    <property name="height_request">25</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">CW :</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="x">17</property>
+                    <property name="y">116</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="search_cw">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Search CW</property>
+                <property name="label" translatable="yes">CW</property>
+              </object>
+              <packing>
+                <property name="position">3</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed5">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="about_label">
+                    <property name="width_request">576</property>
+                    <property name="height_request">65</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">CSA-Rainbow-Table-Tool v1.0
+</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="about_logo">
+                    <property name="width_request">571</property>
+                    <property name="height_request">185</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="x">4</property>
+                    <property name="y">69</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="about">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">About CSA-RAINBOW-TABLE-TOOL</property>
+                <property name="label" translatable="yes">About</property>
+              </object>
+              <packing>
+                <property name="position">4</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolled_window">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTextView" id="output_console">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

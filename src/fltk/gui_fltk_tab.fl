@@ -1,0 +1,284 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0302 
+header_name {.h} 
+code_name {.cxx}
+decl {\#include "gui.h"} {private local
+} 
+
+declblock {\#if defined(__FLTK_TAB__)} {open public after {\#endif}
+} {
+  Function {cb_open_chain_dir(Fl_Widget *w)} {
+    comment cb_open_chain_dir return_type void
+  } {
+    code {do_open_chain_dir();} {}
+  }
+  Function {cb_calc_chain_start_btn(Fl_Widget *w)} {
+    comment cb_calc_chain_start_btn return_type void
+  } {
+    code {do_calc_chain_start_btn();} {}
+  }
+  Function {cb_calc_chain_pause_btn(Fl_Widget *w)} {
+    comment cb_calc_chain_pause_btn return_type void
+  } {
+    code {do_calc_chain_pause_btn();} {}
+  }
+  Function {cb_calc_chain_stop_btn(Fl_Widget *w)} {
+    comment cb_calc_chain_stop_btn return_type void
+  } {
+    code {do_calc_chain_stop_btn();} {}
+  }
+  Function {cb_open_chain_file(Fl_Widget *w)} {
+    comment cb_open_chain_file return_type void
+  } {
+    code {do_open_chain_file();} {}
+  }
+  Function {cb_open_rainbow_table_rbt_dir(Fl_Widget *w)} {
+    comment cb_open_rainbow_table_rbt_dir return_type void
+  } {
+    code {do_open_rainbow_table_rbt_dir();} {}
+  }
+  Function {cb_calc_rainbow_table_merge_btn(Fl_Widget *w)} {
+    comment cb_calc_rainbow_table_merge_btn return_type void
+  } {
+    code {do_calc_rainbow_table_merge_btn();} {}
+  }
+  Function {cb_calc_rainbow_table_stop_btn(Fl_Widget *w)} {
+    comment cb_calc_rainbow_table_stop_btn return_type void
+  } {
+    code {do_calc_rainbow_table_stop_btn();} {}
+  }
+  Function {cb_open_ts_file(Fl_Widget *w)} {
+    comment cb_open_ts_file return_type void
+  } {
+    code {do_open_ts_file();} {}
+  }
+  Function {cb_calc_search_crypt8_start_btn(Fl_Widget *w)} {
+    comment cb_calc_search_crypt8_start_btn return_type void
+  } {
+    code {do_calc_search_crypt8_start_btn();} {}
+  }
+  Function {cb_calc_search_crypt8_stop_btn(Fl_Widget *w)} {
+    comment cb_calc_search_crypt8_stop_btn return_type void
+  } {
+    code {do_calc_search_crypt8_stop_btn();} {}
+  }
+  Function {cb_open_search_cw_rbt_dir(Fl_Widget *w)} {
+    comment cb_open_search_cw_rbt_dir return_type void
+  } {
+    code {do_open_search_cw_rbt_dir();} {}
+  }
+  Function {cb_calc_search_cw_start_btn(Fl_Widget *w)} {
+    comment cb_calc_search_cw_start_btn return_type void
+  } {
+    code {do_calc_search_cw_start_btn();} {}
+  }
+  Function {cb_calc_search_cw_stop_btn(Fl_Widget *w)} {
+    comment cb_calc_search_cw_stop_btn return_type void
+  } {
+    code {do_calc_search_cw_stop_btn();} {}
+  }
+  Function {create_fltk_gui()} {open
+  } {
+    Fl_Window fltk_main_window {
+      label {CSA-Rainbow-Table-Tool} open
+      xywh {979 156 550 400} type Double color 16 labelfont 13 visible
+    } {
+      Fl_Tabs main_fltk_tab {open
+        xywh {5 5 540 215} selection_color 12 labelfont 13 labelsize 11 labelcolor 7 when 0
+      } {
+        Fl_Group {} {
+          label {Calc Chains} open
+          xywh {10 30 505 181} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 hide
+        } {
+          Fl_Input chainDir_Filename {
+            label {Chain Dir :}
+            xywh {79 40 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textcolor 32
+          }
+          Fl_Button chainDir_Open {
+            callback cb_open_chain_dir
+            image {../../data/find_icon.xpm} xywh {430 40 30 25}
+          }
+          Fl_Button calcChain_Start {
+            label Start
+            callback cb_calc_chain_start_btn
+            xywh {79 70 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Button calcChain_Pause {
+            label Pause
+            callback cb_calc_chain_pause_btn
+            xywh {160 70 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 deactivate
+          }
+          Fl_Button calcChain_Stop {
+            label Stop
+            callback cb_calc_chain_stop_btn
+            xywh {240 70 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 deactivate
+          }
+          Fl_Box {} {
+            label {Part :}
+            xywh {30 92 45 25} color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Box {} {
+            label {File :}
+            xywh {32 108 45 25} color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Box {} {
+            label {Speed :}
+            xywh {17 132 60 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Progress calcChain_ProgressPart {
+            xywh {79 101 372 10} color 16 selection_color 15
+          }
+          Fl_Progress calcChain_ProgressFile {
+            xywh {79 116 372 10} color 16 selection_color 15
+          }
+          Fl_Output calcChain_speed_output {
+            xywh {79 132 370 25} box FLAT_BOX color 16 selection_color 16 labeltype NO_LABEL labelfont 13 labelsize 11 labelcolor 32 textsize 11 textcolor 32
+          }
+        }
+        Fl_Group {} {
+          label {Add to Rainbow Table}
+          xywh {10 30 505 180} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 hide
+        } {
+          Fl_Box {} {
+            label {File :}
+            xywh {42 119 31 25} color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Input chainFile_Filename {
+            label {Chain File :}
+            xywh {79 40 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+          Fl_Button chainFile_Open {
+            callback cb_open_chain_file
+            image {../../data/open_icon.xpm} xywh {430 39 30 25}
+          }
+          Fl_Input rbtDir_Filename {
+            label {RBT Dir :}
+            xywh {79 68 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+          Fl_Button rbtDir_Open {
+            callback cb_open_rainbow_table_rbt_dir
+            image {../../data/find_icon.xpm} xywh {430 66 30 25}
+          }
+          Fl_Progress addRainbowTable_ProgressFile {
+            xywh {79 127 372 10} color 16 selection_color 15 labelfont 13 labelsize 11
+          }
+          Fl_Button addRainbowTable_Merge {
+            label Merge
+            callback cb_calc_rainbow_table_merge_btn
+            xywh {79 96 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Button addRainbowTable_Stop {
+            label Stop
+            callback cb_calc_rainbow_table_stop_btn
+            xywh {159 96 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 deactivate
+          }
+        }
+        Fl_Group {} {
+          label {Search Crypt8 in TS}
+          xywh {10 27 525 189} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 hide
+        } {
+          Fl_Box {} {
+            label {Search duplicate crypted payload in TS and show the first 8 bytes (Crypt8) of the payload}
+            xywh {15 35 516 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 align 20
+          }
+          Fl_Input searchCrypt8_Filename {
+            label {TS file :}
+            xywh {90 59 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+          Fl_Button searchCrypt8_Open {
+            callback cb_open_ts_file
+            image {../../data/open_icon.xpm} xywh {440 59 30 25}
+          }
+          Fl_Input searchCrypt8_PID {
+            label {PID :}
+            xywh {90 85 85 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+          Fl_Box {} {
+            label {dec. (empty for all PIDs)}
+            xywh {180 85 281 25} color 16 labelfont 13 labelsize 11 labelcolor 32 align 20
+          }
+          Fl_Input searchCrypt8_PL_size {
+            label {PL size :}
+            xywh {90 110 85 24} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+          Fl_Box {} {
+            label {dec. (empty for a payload of 184 bytes)}
+            xywh {180 109 281 25} color 16 labelfont 13 labelsize 11 labelcolor 32 align 20
+          }
+          Fl_Input searchCrypt8_File_limit {
+            label {File limit :}
+            xywh {90 135 85 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+          Fl_Box {} {
+            label {MByte (limit search - empty for 4096 MByte)}
+            xywh {180 135 281 25} color 16 labelfont 13 labelsize 11 labelcolor 32 align 20
+          }
+          Fl_Button searchCrypt8_Start {
+            label Start
+            callback cb_calc_search_crypt8_start_btn
+            xywh {90 164 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Button searchCrypt8_Stop {
+            label Stop
+            callback cb_calc_search_crypt8_stop_btn
+            xywh {170 164 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Box {} {
+            label {File :}
+            xywh {42 187 40 25} color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Progress searchCrypt8_ProgressFile {
+            xywh {90 195 372 10} color 16 selection_color 15
+          }
+        }
+        Fl_Group {} {
+          label {Search CW}
+          xywh {10 30 505 182} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 hide
+        } {
+          Fl_Input searchCW_Crypt8 {
+            label {Crypt8 :}
+            xywh {65 40 381 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+          Fl_Button searchCW_Open {
+            callback cb_open_search_cw_rbt_dir
+            image {../../data/open_icon.xpm} xywh {416 65 30 25}
+          }
+          Fl_Input searchCW_RBTDir {
+            label {RBT Dir :}
+            xywh {65 66 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+          Fl_Button searchCW_Start {
+            label Start
+            callback cb_calc_search_cw_start_btn
+            xywh {65 93 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Button searchCW_Stop {
+            label Stop
+            callback cb_calc_search_cw_stop_btn
+            xywh {144 92 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Input searchCW_CW {
+            label {CW :}
+            xywh {65 121 381 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+          }
+        }
+        Fl_Group {} {
+          label About open
+          xywh {10 30 530 190} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+        } {
+          Fl_Box about_label {
+            label {CSA-Rainbow-Table-Tool v1.0} selected
+            xywh {11 41 529 30} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+          }
+          Fl_Box about_logo {
+            label logo
+            image {../../data/logo.xpm} xywh {10 85 530 130} color 16 selection_color 16 labelfont 13 labelsize 11
+          }
+        }
+      }
+      Fl_Text_Display output_console {
+        xywh {5 217 540 180}
+      }
+    }
+  }
+} 

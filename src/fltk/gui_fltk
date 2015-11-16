@@ -1,0 +1,278 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0302 
+header_name {.h} 
+code_name {.cxx}
+decl {\#include "gui.h"} {private local
+} 
+
+Function {cb_open_chain_dir(Fl_Widget *w)} {
+  comment cb_open_chain_dir return_type void
+} {
+  code {do_open_chain_dir();} {}
+} 
+
+Function {cb_calc_chain_start_btn(Fl_Widget *w)} {
+  comment cb_calc_chain_start_btn return_type void
+} {
+  code {do_calc_chain_start_btn();} {}
+} 
+
+Function {cb_calc_chain_pause_btn(Fl_Widget *w)} {
+  comment cb_calc_chain_pause_btn return_type void
+} {
+  code {do_calc_chain_pause_btn();} {}
+} 
+
+Function {cb_calc_chain_stop_btn(Fl_Widget *w)} {
+  comment cb_calc_chain_stop_btn return_type void
+} {
+  code {do_calc_chain_stop_btn();} {}
+} 
+
+Function {cb_open_chain_file(Fl_Widget *w)} {
+  comment cb_open_chain_file return_type void
+} {
+  code {do_open_chain_file();} {}
+} 
+
+Function {cb_open_rainbow_table_rbt_dir(Fl_Widget *w)} {
+  comment cb_open_rainbow_table_rbt_dir return_type void
+} {
+  code {do_open_rainbow_table_rbt_dir();} {}
+} 
+
+Function {cb_calc_rainbow_table_merge_btn(Fl_Widget *w)} {
+  comment cb_calc_rainbow_table_merge_btn return_type void
+} {
+  code {do_calc_rainbow_table_merge_btn();} {}
+} 
+
+Function {cb_calc_rainbow_table_stop_btn(Fl_Widget *w)} {
+  comment cb_calc_rainbow_table_stop_btn return_type void
+} {
+  code {do_calc_rainbow_table_stop_btn();} {}
+} 
+
+Function {cb_open_ts_file(Fl_Widget *w)} {
+  comment cb_open_ts_file return_type void
+} {
+  code {do_open_ts_file();} {}
+} 
+
+Function {cb_calc_search_crypt8_start_btn(Fl_Widget *w)} {
+  comment cb_calc_search_crypt8_start_btn return_type void
+} {
+  code {do_calc_search_crypt8_start_btn();} {}
+} 
+
+Function {cb_calc_search_crypt8_stop_btn(Fl_Widget *w)} {
+  comment cb_calc_search_crypt8_stop_btn return_type void
+} {
+  code {do_calc_search_crypt8_stop_btn();} {}
+} 
+
+Function {cb_open_search_cw_rbt_dir(Fl_Widget *w)} {
+  comment cb_open_search_cw_rbt_dir return_type void
+} {
+  code {do_open_search_cw_rbt_dir();} {}
+} 
+
+Function {cb_calc_search_cw_start_btn(Fl_Widget *w)} {
+  comment cb_calc_search_cw_start_btn return_type void
+} {
+  code {do_calc_search_cw_start_btn();} {}
+} 
+
+Function {cb_calc_search_cw_stop_btn(Fl_Widget *w)} {
+  comment cb_calc_search_cw_stop_btn return_type void
+} {
+  code {do_calc_search_cw_stop_btn();} {}
+} 
+
+Function {create_fltk_gui()} {open
+} {
+  Fl_Window fltk_main_window {
+    label {CSA-Rainbow-Table-Tool} open
+    xywh {992 58 475 815} type Double color 16 labelfont 13 visible
+  } {
+    Fl_Group {} {
+      label {Calc Chains} open selected
+      xywh {5 18 465 133} box BORDER_BOX color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 align 5
+    } {
+      Fl_Input chainDir_Filename {
+        label {Chain Dir :}
+        xywh {85 33 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textcolor 32
+      }
+      Fl_Button chainDir_Open {
+        callback cb_open_chain_dir
+        image {../../data/find_icon.xpm} xywh {437 32 30 25}
+      }
+      Fl_Button calcChain_Start {
+        label Start
+        callback cb_calc_chain_start_btn
+        xywh {85 61 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Button calcChain_Pause {
+        label Pause
+        callback cb_calc_chain_pause_btn
+        xywh {165 61 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 deactivate
+      }
+      Fl_Button calcChain_Stop {
+        label Stop
+        callback cb_calc_chain_stop_btn
+        xywh {245 61 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 deactivate
+      }
+      Fl_Box {} {
+        label {Part :}
+        xywh {15 86 45 25} color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Box {} {
+        label {File :}
+        xywh {17 99 45 25} color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Box {} {
+        label {Speed :}
+        xywh {15 117 60 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Progress calcChain_ProgressPart {
+        xywh {85 93 372 10} color 16 selection_color 15
+      }
+      Fl_Progress calcChain_ProgressFile {
+        xywh {85 107 372 10} color 16 selection_color 15
+      }
+      Fl_Output calcChain_speed_output {
+        xywh {85 118 370 25} box FLAT_BOX color 16 selection_color 16 labeltype NO_LABEL labelfont 13 labelsize 11 labelcolor 32 textsize 11 textcolor 32
+      }
+    }
+    Fl_Group {} {
+      label {Add to Rainbow Table} open
+      xywh {5 165 465 129} box BORDER_BOX color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 align 5
+    } {
+      Fl_Box {} {
+        label {File :}
+        xywh {11 260 45 25} color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Input chainFile_Filename {
+        label {Chain File :}
+        xywh {85 171 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+      Fl_Button chainFile_Open {
+        callback cb_open_chain_file
+        image {../../data/open_icon.xpm} xywh {435 170 30 25}
+      }
+      Fl_Input rbtDir_Filename {
+        label {RBT Dir :}
+        xywh {85 206 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+      Fl_Button rbtDir_Open {
+        callback cb_open_rainbow_table_rbt_dir
+        image {../../data/find_icon.xpm} xywh {435 205 30 25}
+      }
+      Fl_Progress addRainbowTable_ProgressFile {
+        xywh {85 265 372 10} color 16 selection_color 15 labelfont 13 labelsize 11
+      }
+      Fl_Button addRainbowTable_Merge {
+        label Merge
+        callback cb_calc_rainbow_table_merge_btn
+        xywh {85 234 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Button addRainbowTable_Stop {
+        label Stop
+        callback cb_calc_rainbow_table_stop_btn
+        xywh {165 234 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 deactivate
+      }
+    }
+    Fl_Group {} {
+      label {Search Crypt8 in TS} open
+      xywh {5 309 465 186} box BORDER_BOX color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 align 5
+    } {
+      Fl_Box {} {
+        label {Search duplicate crypted payload in TS and show the first 8 bytes (Crypt8) of the payload}
+        xywh {10 311 455 25} color 16 selection_color 16 labelfont 13 labelsize 10 labelcolor 32
+      }
+      Fl_Input searchCrypt8_Filename {
+        label {TS file :}
+        xywh {85 333 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+      Fl_Button searchCrypt8_Open {
+        callback cb_open_ts_file
+        image {../../data/open_icon.xpm} xywh {435 332 30 25}
+      }
+      Fl_Input searchCrypt8_PID {
+        label {PID :}
+        xywh {85 359 85 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+      Fl_Box {} {
+        label {dec. (empty for all PIDs)}
+        xywh {175 359 281 25} color 16 labelfont 13 labelsize 11 labelcolor 32 align 20
+      }
+      Fl_Input searchCrypt8_PL_size {
+        label {PL size :}
+        xywh {85 386 85 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+      Fl_Box {} {
+        label {dec. (empty for a payload of 184 bytes)}
+        xywh {175 386 281 25} color 16 labelfont 13 labelsize 11 labelcolor 32 align 20
+      }
+      Fl_Input searchCrypt8_File_limit {
+        label {File limit :}
+        xywh {85 413 85 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+      Fl_Box {} {
+        label {MByte (limit search - empty for 4096 MByte)}
+        xywh {175 413 281 25} color 16 labelfont 13 labelsize 11 labelcolor 32 align 20
+      }
+      Fl_Button searchCrypt8_Start {
+        label Start
+        callback cb_calc_search_crypt8_start_btn
+        xywh {85 439 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Button searchCrypt8_Stop {
+        label Stop
+        callback cb_calc_search_crypt8_stop_btn
+        xywh {165 439 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Box {} {
+        label {File :}
+        xywh {37 464 45 25} color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Progress searchCrypt8_ProgressFile {
+        xywh {85 472 372 10} color 16 selection_color 15
+      }
+    }
+    Fl_Group {} {
+      label {Search CW} open
+      xywh {5 514 465 138} box BORDER_BOX color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 align 5
+    } {
+      Fl_Input searchCW_Crypt8 {
+        label {Crypt8 :}
+        xywh {85 525 381 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+      Fl_Button searchCW_Open {
+        callback cb_open_search_cw_rbt_dir
+        image {../../data/open_icon.xpm} xywh {436 554 30 25}
+      }
+      Fl_Input searchCW_RBTDir {
+        label {RBT Dir :}
+        xywh {85 555 350 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+      Fl_Button searchCW_Start {
+        label Start
+        callback cb_calc_search_cw_start_btn
+        xywh {85 585 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Button searchCW_Stop {
+        label Stop
+        callback cb_calc_search_cw_stop_btn
+        xywh {164 585 75 25} color 16 selection_color 16 labelfont 13 labelsize 11 labelcolor 32
+      }
+      Fl_Input searchCW_CW {
+        label {CW :}
+        xywh {85 614 381 25} color 17 selection_color 16 labelfont 13 labelsize 11 labelcolor 32 textfont 13 textsize 11 textcolor 32
+      }
+    }
+    Fl_Output output_console {
+      xywh {5 658 465 150} color 17 selection_color 17 labelfont 13 labelsize 11 labelcolor 32 align 21 textfont 13 textsize 11 textcolor 32
+    }
+  }
+} 
