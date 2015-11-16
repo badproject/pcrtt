@@ -1,0 +1,49 @@
+#!/bin/sh
+
+## die function
+die() {
+	echo
+	echo "error: $1";
+	echo
+	exit 1;
+}
+
+## try function
+try(){
+	echo "Running: '$@'"
+	$@
+	if [ "$?" != "0" ]; then
+		die "$@";
+	fi
+}
+
+clean(){
+	make maintainer-clean
+	make distclean
+	rm -rf COPYING INSTALL Makefile.in Makefile libtool \
+		aclocal.m4 autom4te.cache compile libnengine.pc \
+		config.guess config.h.in config.sub config.log \
+		config.status configure depcomp install-sh ltmain.sh missing
+	find . -name Makefile.in -exec rm -f {} \;
+}
+
+if [ "$1" = "clean" ] ; then
+clean
+else 
+	echo
+	#if [ -f "Makefile" ]; then
+	 #clean
+	#fi
+
+	#try rm -Rf autom4te.cache
+	#try libtoolize -c --automake --force
+	#try aclocal -I m4
+	#try autoconf -f
+	#try autoheader -f
+	#try automake -acf --foreign
+	try autoreconf -iv -Wall
+	try autoreconf -fv -Wall
+	echo
+fi
+
+exit 0
