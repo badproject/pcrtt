@@ -1,5 +1,5 @@
 # About 
-"PCRTT" is a posix compliant port of the csa colibri toolchain tool.
+"PCRTT" is a posix compliant port of the CSA-Rainbow-Table-Tool from colibri.
 
 # Work in progress.
 There is nothing working out of the box.
