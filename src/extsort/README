@@ -1,0 +1,74 @@
+Welcome To External Sorting Library Project
+
+This is a C/C++ library for out of core sorting. The main API function in this library is ExSort . The usage of this API function is shown below. An implementation of an external sorting program ex-sort is also available. Its usage is also shown below.
+Download
+The API is currently well tested in 32-bit machines. Currently binary versions are available or GNU/Linux/i686 (libexsort.a). If you want to build on other platforms please download the source at (release.0.9.src.tgz). The source should be compiled with any C compiler supporting C99 standards. You can always checkout a last copy of the source code using cvs as follows.
+
+cvs -d:pserver:anonymous@lib-ex-sort.cvs.sourceforge.net:/cvsroot/lib-ex-sort co lib-ex-sort
+
+Usage of the API function.
+
+Download the library (libexsort.a) or build it from the source and include the header file ExternalSortAPI.h in your compiler include path to use it.
+
+DESC: External Sort API function.
+INPUT:
+1.  in_file: name of the file containing keys to sort.
+2. out_file: name of the file to save the sorted keys.
+3. KEY_SIZE: size of each key in bytes, 
+4. col_start: the bytes between [col_start, col_end] will be used
+              used to compare the keys during sorting. 
+5. col_end:  see above. 
+6. endian: either 0 or 1 (if 0 sorts the bytes between [col_start, col_end]
+           from left right, otherwise sorts from right to left).
+
+=============================================
+void ExSort(const char *in_file, const char *out_file, unsigned char KEY_SIZE,
+            unsigned char col_start, unsigned char col_end, unsigned char endian);
+=============================================
+
+Usage of the sorting program.
+
+USAGE: ./ex-sort {KEY_SIZE} {SORT-KEY-START} {SORT-KEY-END} {in-file} {out-file} {endian}
+
+The following shows an example on how to use the ex-sort program to sort a text file with fixed with keys of 36 bytes (37 including the new line). The following example shows the use of ex-sort to sort the first two bytes of each key.
+
+vamsik-desktop:/media/Iomega_HDD/lib-ex-sort$ head test_case.1.txt 
+GCTTTTAGTTTTCTGTAAGTTTTGCTCTTTTGGATA
+TGTCATTGCTTACTCTTCACAAATGTTTACGTGTAA
+GGGAGAAAAAACTTCAAACAGACATCAACATGGCCA
+TTCATTTGGAAGACGAAACAGTTATCCCCGGAAATG
+CCACCGCTGCATCCTGAGAACGTGCCGGTCGGGTGG
+CTATCTATTATAGTCACATAATAGACATTAACAAAG
+GTATATGACTACGAATGTATATTTTGTAATATTATT
+GGGGATACTCTCGAGCTGGTTATGATAAAGTGACGT
+ATGAATTATTATATACTATGTTTTTTTCTTACATTA
+TGGATTTTGTAGTCAAGTCTTCATGTTTGATCTATG
+
+
+vamsik-desktop:/media/Iomega_HDD/lib-ex-sort$ ./ex-sort 37 0 1 test_case.1.txt test_case.1.sorted.txt 0
+SIZE OF EACH KEY IS 37
+EACH KEY WILL BE SORTED BETWEEN 0 AND 1 ENDIAN 0
+
+[EX-SORT CREATED 1 RUNS] took 0 ticks
+[FINAL-RUN] has 5104 keys
+[R-WAY MERGE] took 0 ticks
+Converting the runfile=./tmp-eQVshHL to output=test_case.1.sorted.txt
+
+
+vamsik-desktop:/media/Iomega_HDD/lib-ex-sort$ head test_case.1.sorted.txt 
+AATAGAAACGGATGGTCTGCAACAAAATCTATTTCA
+AAGATGACTTGATTGATTATTTTCCATGAACGAATC
+AATTCAATCTAACAGTATATACTACAAAAAAATGAT
+AAGGGTAGATTACTTAAAAGGAGTGTGTTTGGTTAG
+AAAAAAAAACTAGCATGTATGGTACTTCTCTTACGA
+AACAGGCGATCTCTAAACTTCGCCTAGTGTCTTTAT
+AAAGAAAATAATCTTCATACTAGTCTTACACTCTTG
+AAACGCACGAAACAAAAAAAAAAAAACGATCCGAAA
+AAAAATATTAGCAAAGGTCCAACATTTTTTTGTGTA
+AACCCAAAAATATCAGATTTTGGATTGGCTCGGATG
+
+Questions
+If you have any questions please email vamsik {at} engr uconn edu.
+
+(c) 2008-2010, University of Connecticut, Storrs, CT, U.S.A.
+
